@@ -4,4 +4,13 @@ title: "Hello World"
 tags: [intro]
 ---
 
-Your markdown content here.
+This is **Markdown** inside a terminal-style skin.
+
+-   Bullet
+-   Points
+
+`inline code`
+
+```bash
+echo "code blocks look like terminal output"
+```

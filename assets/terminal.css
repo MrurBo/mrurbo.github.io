@@ -1,0 +1,209 @@
+:root {
+	--bg: #0b0f10;
+	--bg2: #0f1416;
+	--fg: #c9f0c8;
+	--dim: #7aa97a;
+	--accent: #33ff66;
+	--red: #ff5f56;
+	--yellow: #ffbd2e;
+	--green: #27c93f;
+	--link: var(--accent);
+	--code-bg: #0a1112;
+	--border: #1b2224;
+}
+[data-theme="light"] {
+	--bg: #f5f7f8;
+	--bg2: #fff;
+	--fg: #0a0d0c;
+	--dim: #52615a;
+	--accent: #007f3b;
+	--link: #006f3a;
+	--code-bg: #f0f3f4;
+	--border: #d9e1e3;
+}
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--fg);
+	font: 16px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+a {
+	color: var(--link);
+	text-decoration: underline;
+}
+img {
+	max-width: 100%;
+}
+pre,
+code {
+	font: 0.95rem/1.5 ui-monospace, monospace;
+}
+pre {
+	background: var(--code-bg);
+	padding: 1rem;
+	border: 1px solid var(--border);
+	overflow: auto;
+	border-radius: 8px;
+}
+code {
+	background: var(--code-bg);
+	padding: 0.1rem 0.3rem;
+	border-radius: 4px;
+}
+
+.term-wrap {
+	max-width: 980px;
+	margin: 3vh auto;
+	padding: 0 12px;
+}
+.term-titlebar {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	background: var(--bg2);
+	border: 1px solid var(--border);
+	border-bottom: none;
+	border-radius: 12px 12px 0 0;
+	padding: 0.5rem 0.75rem;
+}
+.traffic {
+	display: flex;
+	gap: 0.5rem;
+}
+.dot {
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.9;
+}
+.dot.red {
+	background: var(--red);
+}
+.dot.yellow {
+	background: var(--yellow);
+}
+.dot.green {
+	background: var(--green);
+}
+.term-titlebar .title {
+	flex: 1;
+	opacity: 0.8;
+}
+#theme-toggle {
+	background: transparent;
+	border: 1px solid var(--border);
+	color: var(--dim);
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.term-body {
+	border: 1px solid var(--border);
+	border-top: none;
+	border-radius: 0 0 12px 12px;
+	background: var(--bg2);
+	padding: 0;
+}
+.prompt {
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid var(--border);
+	color: var(--dim);
+}
+.prompt .user {
+	color: var(--accent);
+}
+.prompt .cwd {
+	color: var(--fg);
+}
+.screen {
+	padding: 1rem 1rem 2.5rem;
+	position: relative;
+	min-height: 40vh;
+}
+.cursor {
+	display: inline-block;
+	width: 0.6ch;
+	height: 1.1em;
+	background: var(--accent);
+	margin-left: 0.2ch;
+	vertical-align: -0.1em;
+	animation: blink 1s steps(1, end) infinite;
+}
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+.status {
+	padding: 0.5rem 1rem;
+	border-top: 1px dashed var(--border);
+	color: var(--dim);
+	font-size: 0.9rem;
+}
+
+/* “terminal-ish” markdown */
+.post h1,
+.post h2,
+.post h3,
+.post h4 {
+	margin: 1.2rem 0 0.5rem;
+}
+.post h2::before {
+	content: "# ";
+	color: var(--dim);
+}
+.post h3::before {
+	content: "## ";
+	color: var(--dim);
+}
+.post h4::before {
+	content: "### ";
+	color: var(--dim);
+}
+.post p {
+	margin: 0.75rem 0;
+}
+.post ul,
+.post ol {
+	padding-left: 1.4rem;
+}
+blockquote {
+	border-left: 3px solid var(--border);
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+	color: var(--dim);
+	background: var(--code-bg);
+	border-radius: 6px;
+}
+
+/* tables */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1rem 0;
+	border: 1px solid var(--border);
+}
+th,
+td {
+	padding: 0.5rem 0.6rem;
+	border: 1px solid var(--border);
+}
+thead th {
+	background: var(--code-bg);
+}
+
+/* selection */
+::selection {
+	background: var(--accent);
+	color: #001a09;
+}

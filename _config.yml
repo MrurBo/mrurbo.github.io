@@ -1,10 +1,8 @@
-title: My Blog
+title: My Terminal Blog
 description: notes
 url: "https://mrurbo.github.io"
-theme: minima # or remove and use your own layouts below
 markdown: kramdown
 plugins:
     - jekyll-feed
     - jekyll-seo-tag
-permalink: /:categories/:year/:month/:day/:title/
-# if you want a custom collection instead of _posts, see section 3
+permalink: /:year/:month/:day/:title/
