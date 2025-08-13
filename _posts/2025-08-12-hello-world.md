@@ -1,16 +1,18 @@
 ---
 layout: post
-title: "Hello World"
+title: "Index"
 tags: [intro]
 ---
 
-This is **Markdown** inside a terminal-style skin.
+## Index page, used for testing
 
--   Bullet
--   Points
+[Link](https://mrurbo.github.io/) [**Link Bold**](https://mrurbo.github.io/)
 
-`inline code`
+# Title
 
-```bash
-echo "code blocks look like terminal output"
+`Inline Code`
+
+```python
+import python-code
+print("Test!")
 ```
