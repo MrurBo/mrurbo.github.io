@@ -207,3 +207,29 @@ thead th {
 	background: var(--accent);
 	color: #001a09;
 }
+
+.highlight {
+	background: #272822;
+	color: #f8f8f2;
+	padding: 1em;
+	border-radius: 6px;
+	overflow-x: auto;
+}
+.highlight .k {
+	color: #66d9ef;
+} /* keyword */
+.highlight .s {
+	color: #e6db74;
+} /* string */
+.highlight .n {
+	color: #f8f8f2;
+} /* name */
+.highlight .o {
+	color: #f92672;
+} /* operator */
+.highlight .c {
+	color: #75715e;
+} /* comment */
+.highlight .m {
+	color: #ae81ff;
+} /* number */
