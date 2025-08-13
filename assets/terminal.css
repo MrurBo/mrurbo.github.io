@@ -208,28 +208,92 @@ thead th {
 	color: #001a09;
 }
 
+/* container */
 .highlight {
 	background: #272822;
 	color: #f8f8f2;
 	padding: 1em;
 	border-radius: 6px;
-	overflow-x: auto;
+	overflow: auto;
 }
-.highlight .k {
+
+/* comments / punctuation / operators */
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+	color: #75715e;
+}
+.highlight .p {
+	color: #f8f8f2;
+}
+.highlight .o,
+.highlight .ow {
+	color: #f92672;
+}
+
+/* KEYWORDS (includes 'import' as .kn) */
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
 	color: #66d9ef;
-} /* keyword */
-.highlight .s {
-	color: #e6db74;
-} /* string */
+}
+
+/* names */
 .highlight .n {
 	color: #f8f8f2;
-} /* name */
-.highlight .o {
-	color: #f92672;
-} /* operator */
-.highlight .c {
-	color: #75715e;
-} /* comment */
-.highlight .m {
+}
+.highlight .nb,
+.highlight .bp {
+	color: #a6e22e;
+} /* builtins/True/None */
+.highlight .nf {
+	color: #a6e22e;
+} /* function def */
+.highlight .nc,
+.highlight .nn {
+	color: #f8f8f2;
+} /* class / namespace */
+.highlight .nd {
+	color: #fd971f;
+} /* decorator */
+
+/* literals */
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo {
 	color: #ae81ff;
-} /* number */
+}
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sr,
+.highlight .ss,
+.highlight .sx {
+	color: #e6db74;
+}
+
+/* errors/emphasis */
+.highlight .err {
+	color: #f92672;
+	text-decoration: underline;
+}
+.highlight .ge {
+	font-style: italic;
+}
+.highlight .gs {
+	font-weight: 700;
+}
