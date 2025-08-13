@@ -1,6 +1,6 @@
 title: My Blog
 description: notes
-url: "https://<your-user>.github.io"
+url: "https://mrurbo.github.io"
 theme: minima # or remove and use your own layouts below
 markdown: kramdown
 plugins:
